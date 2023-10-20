@@ -1,15 +1,14 @@
 import styled from "styled-components";
 
+const apiURL = process.env.REACT_APP_SERVER_URL;
+
 const ProjectCard = ({ link, title, imgsrc, technologies }) => {
   return (
     <Card>
       <a href={link} target="_blank" rel="noreferrer">
         <Container>
           <ImgBox>
-            <img
-              src={`http://localhost:3000/uploads/project/${imgsrc}`}
-              alt=""
-            />
+            <img src={`${apiURL}/uploads/project/${imgsrc}`} alt="" />
           </ImgBox>
           <CardBox className="card-box">
             <h3>{title}</h3>
@@ -71,6 +70,8 @@ const Container = styled.div`
   }
 `;
 const ImgBox = styled.div`
+  min-width: 329px;
+  min-height: 256px;
   img {
     width: 100%;
     height: auto;

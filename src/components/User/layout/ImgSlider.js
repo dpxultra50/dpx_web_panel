@@ -127,6 +127,10 @@ const ImgSlider = () => {
   );
 };
 const Carousel = styled(Slider)`
+  width: 100%;
+  @media (min-width: 992px) {
+    min-height: 510px;
+  }
   .slick-prev {
     position: absolute;
     top: 50%;
@@ -194,9 +198,24 @@ const Wrap = styled.div`
 `;
 const ImageContainer = styled.div`
   width: 100%;
+  @media (max-width: 991px) {
+    position: relative;
+    width: 100%;
+    padding-bottom: 60%;
+  }
+  @media (min-width: 992px) {
+    min-height: 510px;
+  }
   img {
     width: 100%;
     object-fit: cover;
+    @media (max-width: 991px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 `;
 const DetailsContainer = styled.div`

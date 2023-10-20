@@ -123,6 +123,9 @@ const Viewers = () => {
 const Container = styled.div`
   margin-top: 50px;
   padding: 0px 35px 120px 35px;
+  @media (max-width: 767px) {
+    padding: 0px 35px 0px 35px;
+  }
 `;
 
 //About Start
@@ -152,11 +155,18 @@ const AboutImg = styled.div`
   }
 `;
 const FrontImg = styled.div`
+  position: relative;
+  padding-bottom: 100%;
+
   img {
-    width: 100%;
-    max-height: 575px;
     border-radius: 10px;
     object-fit: cover;
+    max-height: 575px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 `;
 const BackImg = styled.div`
@@ -194,6 +204,7 @@ const Statistics = styled.div`
   @media (max-width: 767px) {
     position: unset;
     flex-direction: column;
+    margin-top: 20px;
   }
   h1 {
     font-size: 55px;
@@ -225,7 +236,7 @@ const AboutText = styled.div`
     width: 60%;
   }
   @media (max-width: 767px) {
-    margin-top: 80px;
+    margin-top: 40px;
     margin-left: 0px;
     width: 100%;
   }

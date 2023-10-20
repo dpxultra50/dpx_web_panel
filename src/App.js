@@ -1,50 +1,105 @@
 import { Route, Routes, Navigate } from "react-router-dom";
-import Home from "./components/User/Home/Home";
-import Admin from "./components/Admin/Admin";
-import User from "./components/User/User";
-import Dashboard from "./components/Admin/Dashboard/Dashboard";
-import LoginSignup from "./components/User/LoginSignup/LoginSignUp";
-import LoginCard from "./components/User/LoginSignup/LoginCard";
-import SignupCard from "./components/User/LoginSignup/SignupCard";
-import ForgotPassword from "./components/User/LoginSignup/ForgotPassword";
-import ResetPassword from "./components/User/LoginSignup/ResetPassword,";
-import Profile from "./components/User/Profile/Profile";
-import About from "./components/User/About/About";
-import { useEffect } from "react";
+import { Suspense, useEffect, lazy } from "react";
 import { loadUser } from "./Features/userFeatures/authSlice";
 import { useDispatch } from "react-redux";
+
+import User from "./components/User/User";
+import Home from "./components/User/Home/Home";
 import ProtectedRoute from "./components/Route/ProtectedRoute";
-import VerifiRequest from "./components/User/LoginSignup/VerifiRequest";
-import VerifyAccount from "./components/User/LoginSignup/VerifyAccount";
-import Service from "./components/User/Service/Service";
-import AccountStatus from "./components/User/LoginSignup/AccountStatus";
-import UpdateProfile from "./components/User/Profile/UpdateProfile";
-import UpdatePassword from "./components/User/LoginSignup/UpdatePassword";
-import ContactUs from "./components/User/ContactUs/ContactUs";
-import MeetingDateTime from "./components/User/ContactUs/MeetingDateTime";
-import MeetingDetails from "./components/User/ContactUs/MeetingDetails";
-import Meetings from "./components/Admin/Meetings/Meetings";
-import Works from "./components/User/Works/Works";
-import IndustriesWeServe from "./components/User/Industries/IndustriesWeServe";
-import ProjectDeatils from "./components/Admin/Projects/ProjectDeatils";
-import VerifyAndSchedule from "./components/Admin/Meetings/VerifyAndSchedule";
-import ClintMeetingDeatils from "./components/User/Profile/ClintMeetingDeatils";
-import GetAllQuote from "./components/Admin/Meetings/GetAllQuote";
-import Project from "./components/Admin/Projects/Project";
-import CreateProject from "./components/Admin/Projects/CreateProject";
 import FourOFour from "./components/User/layout/FourOFour";
-import UserProjectDetails from "./components/User/Project/UserProjectDetails";
-import UpdateProject from "./components/Admin/Projects/UpdateProject";
-import AdminUsers from "./components/Admin/Users/AdminUsers";
-import MobileApp from "./components/User/Services/MobileApp";
-import WebDevelopment from "./components/User/Services/WebDevelopment";
-import BlockchainDev from "./components/User/Services/BlockchainDev";
-import EcommerceDev from "./components/User/Services/EcommerceDev";
-import CyberSecurity from "./components/User/Services/CyberSecurity";
-import AiMl from "./components/User/Services/AiMl";
-import DigitalMarketing from "./components/User/Services/DigitalMarketing";
-import IotEmbedded from "./components/User/Services/IotEmbedded";
-import MetaverseDev from "./components/User/Services/MetaverseDev";
+import Loader from "./components/User/layout/Loader";
+
+const Admin = lazy(() => import("./components/Admin/Admin"));
+const Dashboard = lazy(() => import("./components/Admin/Dashboard/Dashboard"));
+const LoginSignup = lazy(() =>
+  import("./components/User/LoginSignup/LoginSignUp")
+);
+const LoginCard = lazy(() => import("./components/User/LoginSignup/LoginCard"));
+const SignupCard = lazy(() =>
+  import("./components/User/LoginSignup/SignupCard")
+);
+const ForgotPassword = lazy(() =>
+  import("./components/User/LoginSignup/ForgotPassword")
+);
+const ResetPassword = lazy(() =>
+  import("./components/User/LoginSignup/ResetPassword,")
+);
+const Profile = lazy(() => import("./components/User/Profile/Profile"));
+const About = lazy(() => import("./components/User/About/About"));
+const VerifiRequest = lazy(() =>
+  import("./components/User/LoginSignup/VerifiRequest")
+);
+const VerifyAccount = lazy(() =>
+  import("./components/User/LoginSignup/VerifyAccount")
+);
+const Service = lazy(() => import("./components/User/Service/Service"));
+const AccountStatus = lazy(() =>
+  import("./components/User/LoginSignup/AccountStatus")
+);
+const UpdateProfile = lazy(() =>
+  import("./components/User/Profile/UpdateProfile")
+);
+const UpdatePassword = lazy(() =>
+  import("./components/User/LoginSignup/UpdatePassword")
+);
+const ContactUs = lazy(() => import("./components/User/ContactUs/ContactUs"));
+const MeetingDateTime = lazy(() =>
+  import("./components/User/ContactUs/MeetingDateTime")
+);
+const MeetingDetails = lazy(() =>
+  import("./components/User/ContactUs/MeetingDetails")
+);
+const Meetings = lazy(() => import("./components/Admin/Meetings/Meetings"));
+const Works = lazy(() => import("./components/User/Works/Works"));
+const IndustriesWeServe = lazy(() =>
+  import("./components/User/Industries/IndustriesWeServe")
+);
+const ProjectDeatils = lazy(() =>
+  import("./components/Admin/Projects/ProjectDeatils")
+);
+const VerifyAndSchedule = lazy(() =>
+  import("./components/Admin/Meetings/VerifyAndSchedule")
+);
+const ClintMeetingDeatils = lazy(() =>
+  import("./components/User/Profile/ClintMeetingDeatils")
+);
+const GetAllQuote = lazy(() =>
+  import("./components/Admin/Meetings/GetAllQuote")
+);
+const Project = lazy(() => import("./components/Admin/Projects/Project"));
+const CreateProject = lazy(() =>
+  import("./components/Admin/Projects/CreateProject")
+);
+const UserProjectDetails = lazy(() =>
+  import("./components/User/Project/UserProjectDetails")
+);
+const UpdateProject = lazy(() =>
+  import("./components/Admin/Projects/UpdateProject")
+);
+const AdminUsers = lazy(() => import("./components/Admin/Users/AdminUsers"));
+const MobileApp = lazy(() => import("./components/User/Services/MobileApp"));
+const WebDevelopment = lazy(() =>
+  import("./components/User/Services/WebDevelopment")
+);
+const BlockchainDev = lazy(() =>
+  import("./components/User/Services/BlockchainDev")
+);
+const EcommerceDev = lazy(() =>
+  import("./components/User/Services/EcommerceDev")
+);
+const CyberSecurity = lazy(() =>
+  import("./components/User/Services/CyberSecurity")
+);
+const AiMl = lazy(() => import("./components/User/Services/AiMl"));
+const DigitalMarketing = lazy(() =>
+  import("./components/User/Services/DigitalMarketing")
+);
+const IotEmbedded = lazy(() =>
+  import("./components/User/Services/IotEmbedded")
+);
+const MetaverseDev = lazy(() =>
+  import("./components/User/Services/MetaverseDev")
+);
 
 const App = () => {
   const dispatch = useDispatch();
@@ -52,78 +107,253 @@ const App = () => {
   useEffect(() => {
     dispatch(loadUser());
   }, [dispatch]);
+
   return (
     <div className="App">
       <Routes>
         <Route element={<User />}>
           <Route path="/" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/works" element={<Works />} />
-          <Route path="/industries" element={<IndustriesWeServe />} />
+          <Route
+            path="/home"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <Suspense fallback={<Loader />}>
+                <About />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/service"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Service />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/works"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Works />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/industries"
+            element={
+              <Suspense fallback={<Loader />}>
+                <IndustriesWeServe />
+              </Suspense>
+            }
+          />
 
           {/* Service Routs */}
           <Route
             path="/service/mobile-app-development"
-            element={<MobileApp />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <MobileApp />
+              </Suspense>
+            }
           />
-          <Route path="/service/web-development" element={<WebDevelopment />} />
+          <Route
+            path="/service/web-development"
+            element={
+              <Suspense fallback={<Loader />}>
+                <WebDevelopment />
+              </Suspense>
+            }
+          />
           <Route
             path="/service/blockchain-development"
-            element={<BlockchainDev />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <BlockchainDev />
+              </Suspense>
+            }
           />
           <Route
             path="/service/ecommerce-development"
-            element={<EcommerceDev />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <EcommerceDev />
+              </Suspense>
+            }
           />
-          <Route path="/service/cyber-security" element={<CyberSecurity />} />
+          <Route
+            path="/service/cyber-security"
+            element={
+              <Suspense fallback={<Loader />}>
+                <CyberSecurity />
+              </Suspense>
+            }
+          />
           <Route
             path="/service/artificial-intelligence-and-machine-learning"
-            element={<AiMl />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <AiMl />
+              </Suspense>
+            }
           />
           <Route
             path="/service/digital-marketing"
-            element={<DigitalMarketing />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <DigitalMarketing />
+              </Suspense>
+            }
           />
-          <Route path="/service/iot-development" element={<IotEmbedded />} />
+          <Route
+            path="/service/iot-development"
+            element={
+              <Suspense fallback={<Loader />}>
+                <IotEmbedded />
+              </Suspense>
+            }
+          />
           <Route
             path="/service/metaverse-development"
-            element={<MetaverseDev />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <MetaverseDev />
+              </Suspense>
+            }
           />
 
           <Route path="*" element={<FourOFour />} />
 
           <Route
             path="/meeting/details/:id"
-            element={<ClintMeetingDeatils />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <ClintMeetingDeatils />
+              </Suspense>
+            }
           />
-          <Route element={<ContactUs />}>
+          <Route
+            element={
+              <Suspense fallback={<Loader />}>
+                <ContactUs />
+              </Suspense>
+            }
+          >
             <Route
               path="/contactus/meeting/timedate"
-              element={<MeetingDateTime />}
+              element={
+                <Suspense fallback={<Loader />}>
+                  <MeetingDateTime />
+                </Suspense>
+              }
             />
             <Route
               path="/contactus/meeting/details"
-              element={<MeetingDetails />}
+              element={
+                <Suspense fallback={<Loader />}>
+                  <MeetingDetails />
+                </Suspense>
+              }
             />
           </Route>
 
-          <Route element={<LoginSignup />}>
-            <Route path="/login" element={<LoginCard />} />
-            <Route path="/signup" element={<SignupCard />} />
-            <Route path="/password/forgot" element={<ForgotPassword />} />
-            <Route path="/password/reset/:token" element={<ResetPassword />} />
+          <Route
+            element={
+              <Suspense fallback={<Loader />}>
+                <LoginSignup />
+              </Suspense>
+            }
+          >
+            <Route
+              path="/login"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <LoginCard />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/signup"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <SignupCard />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/password/forgot"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <ForgotPassword />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/password/reset/:token"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <ResetPassword />
+                </Suspense>
+              }
+            />
           </Route>
 
           {/* --------//ProtectedRoute//----------- */}
           <Route element={<ProtectedRoute />}>
-            <Route path="/account" element={<Profile />} />
-            <Route path="/account/verifirequest" element={<VerifiRequest />} />
-            <Route path="/account/verify/:token" element={<VerifyAccount />} />
-            <Route path="/account/status" element={<AccountStatus />} />
-            <Route path="/account/update" element={<UpdateProfile />} />
-            <Route path="/password/update" element={<UpdatePassword />} />
+            <Route
+              path="/account"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <Profile />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/account/verifirequest"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <VerifiRequest />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/account/verify/:token"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <VerifyAccount />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/account/status"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <AccountStatus />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/account/update"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <UpdateProfile />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/password/update"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <UpdatePassword />
+                </Suspense>
+              }
+            />
             <Route
               path="/project/details/:id"
               element={<UserProjectDetails />}
@@ -134,32 +364,98 @@ const App = () => {
 
         {/*--------------- //ADMIN ROUTS// -----------*/}
         <Route element={<ProtectedRoute isAdmin={true} />}>
-          <Route element={<Admin />}>
+          <Route
+            element={
+              <Suspense fallback={<Loader />}>
+                <Admin />
+              </Suspense>
+            }
+          >
             <Route
               path="/admin"
               element={<Navigate to="/admin/dashboard" replace />}
             />
-            <Route path="/admin/dashboard" element={<Dashboard />} />;
-            <Route path="/admin/meetings" element={<Meetings />} />;
             <Route
-              path="/admin/meeting/verify/:id"
-              element={<VerifyAndSchedule />}
+              path="/admin/dashboard"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <Dashboard />
+                </Suspense>
+              }
             />
             ;
-            <Route path="/admin/quotes" element={<GetAllQuote />} />;
-            <Route path="/admin/projects" element={<Project />} />;
-            <Route path="/admin/project/create" element={<CreateProject />} />;
+            <Route
+              path="/admin/meetings"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <Meetings />
+                </Suspense>
+              }
+            />
+            ;
+            <Route
+              path="/admin/meeting/verify/:id"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <VerifyAndSchedule />
+                </Suspense>
+              }
+            />
+            ;
+            <Route
+              path="/admin/quotes"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <GetAllQuote />
+                </Suspense>
+              }
+            />
+            ;
+            <Route
+              path="/admin/projects"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <Project />
+                </Suspense>
+              }
+            />
+            ;
+            <Route
+              path="/admin/project/create"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <CreateProject />
+                </Suspense>
+              }
+            />
+            ;
             <Route
               path="/admin/project/details/:id"
-              element={<ProjectDeatils />}
+              element={
+                <Suspense fallback={<Loader />}>
+                  <ProjectDeatils />
+                </Suspense>
+              }
             />
             ;
             <Route
               path="/admin/project/update/:id"
-              element={<UpdateProject />}
+              element={
+                <Suspense fallback={<Loader />}>
+                  <UpdateProject />
+                </Suspense>
+              }
             />
             ;
-            <Route path="/admin/users" element={<AdminUsers />} />;
+            <Route
+              path="/admin/users"
+              element={
+                <Suspense fallback={<Loader />}>
+                  <AdminUsers />
+                </Suspense>
+              }
+            />
+            ;
             <Route path="/admin/*" element={<FourOFour />} />
           </Route>
         </Route>

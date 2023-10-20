@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import {Link} from 'react-router-dom';
-import {motion, useAnimation, useInView} from 'framer-motion';
-import {useRef} from 'react';
-import {useEffect} from 'react';
-import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
+import styled from "styled-components";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import { Link } from "react-router-dom";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useRef } from "react";
+import { useEffect } from "react";
+import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 
 const Features = () => {
   const ref = useRef(null);
@@ -22,7 +22,7 @@ const Features = () => {
         opacity: 1,
         transition: {
           duration: 0.1,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         },
       });
     }
@@ -43,7 +43,8 @@ const Features = () => {
         transition={{
           repeat: Infinity,
           duration: 3,
-        }}>
+        }}
+      >
         <img
           src="https://roofsie-html.vercel.app/main-html/assets/images/shapes/brand-one-shape-1-dark.png"
           alt=""
@@ -57,7 +58,8 @@ const Features = () => {
         transition={{
           repeat: Infinity,
           duration: 3,
-        }}>
+        }}
+      >
         <img
           src="https://roofsie-html.vercel.app/main-html/assets/images/shapes/brand-one-shape-1-dark.png"
           alt=""
@@ -71,7 +73,8 @@ const Features = () => {
         transition={{
           repeat: Infinity,
           duration: 3,
-        }}>
+        }}
+      >
         <img
           src="https://roofsie-html.vercel.app/main-html/assets/images/shapes/brand-one-shape-1-dark.png"
           alt=""
@@ -85,7 +88,8 @@ const Features = () => {
         transition={{
           repeat: Infinity,
           duration: 3,
-        }}>
+        }}
+      >
         <img
           src="https://roofsie-html.vercel.app/main-html/assets/images/shapes/brand-one-shape-1-dark.png"
           alt=""
@@ -289,7 +293,7 @@ const Wrap = styled.div`
   transition: all 500ms ease;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;

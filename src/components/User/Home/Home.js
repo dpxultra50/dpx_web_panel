@@ -11,7 +11,6 @@ import Services from "../layout/Services";
 import Testimonials from "../layout/Testimonials";
 import Viewers from "../layout/Viewers";
 import WorkWith from "../layout/WorkWith";
-import ServiceHome from "../layout/ServiceHome";
 import Features from "../layout/Features";
 import MetaData from "../layout/MetaData";
 
@@ -40,7 +39,6 @@ const Home = () => {
       <Clients />
       <ProcessWeFollow />
       <RecentProjects />
-      <ServiceHome />
       <WorkWith />
       <Testimonials />
       <NewsLetter />
