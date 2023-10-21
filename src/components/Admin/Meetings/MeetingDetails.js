@@ -14,6 +14,7 @@ import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 import PublicIcon from "@mui/icons-material/Public";
 import SendIcon from "@mui/icons-material/Send";
 import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
+import "moment-timezone";
 
 const MeetingDetails = ({ meeting }) => {
   //LocalTime

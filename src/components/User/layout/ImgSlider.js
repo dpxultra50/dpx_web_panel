@@ -128,9 +128,6 @@ const ImgSlider = () => {
 };
 const Carousel = styled(Slider)`
   width: 100%;
-  @media (min-width: 992px) {
-    min-height: 510px;
-  }
   .slick-prev {
     position: absolute;
     top: 50%;
@@ -197,7 +194,9 @@ const Wrap = styled.div`
   position: relative;
 `;
 const ImageContainer = styled.div`
+  position: relative;
   width: 100%;
+  padding-bottom: 39%;
   @media (max-width: 991px) {
     position: relative;
     width: 100%;
@@ -207,8 +206,11 @@ const ImageContainer = styled.div`
     min-height: 510px;
   }
   img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    object-fit: cover;
+    height: 100%;
     @media (max-width: 991px) {
       position: absolute;
       top: 0;

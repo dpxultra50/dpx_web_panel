@@ -161,7 +161,7 @@ const FrontImg = styled.div`
   img {
     border-radius: 10px;
     object-fit: cover;
-    max-height: 575px;
+    /* max-height: 575px; */
     position: absolute;
     top: 0;
     left: 0;
@@ -169,6 +169,7 @@ const FrontImg = styled.div`
     height: 100%;
   }
 `;
+
 const BackImg = styled.div`
   img {
     position: absolute;

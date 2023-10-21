@@ -356,7 +356,11 @@ const App = () => {
             />
             <Route
               path="/project/details/:id"
-              element={<UserProjectDetails />}
+              element={
+                <Suspense fallback={<Loader />}>
+                  <UserProjectDetails />
+                </Suspense>
+              }
             />
             ;
           </Route>
