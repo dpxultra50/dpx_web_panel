@@ -128,6 +128,7 @@ const ImgSlider = () => {
 };
 const Carousel = styled(Slider)`
   width: 100%;
+  overflow: hidden;
   .slick-prev {
     position: absolute;
     top: 50%;

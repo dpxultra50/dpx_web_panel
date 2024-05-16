@@ -6,6 +6,14 @@ import ProductCard from '../Cards/ProductCard';
 
 const ServiceHome = () => {
   const serviceData = [
+  
+    {
+      title: 'Elearning Platform Development',
+      description:
+        'End-to-end website development expertise at your fingertips.',
+      imgsrc: '/images/digitalproduct/elearning-platform-development.webp',
+      iconsrc: '/images/technologies/e-learning.png',
+    },
     {
       title: 'Full Stack Website',
       description:

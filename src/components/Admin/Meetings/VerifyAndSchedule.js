@@ -1,30 +1,30 @@
-import styled from 'styled-components';
-import Header from '../Components/Header';
-import Loader from '../../User/layout/Loader';
-import {useDispatch, useSelector} from 'react-redux';
-import {toast, ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import MeetingDetails from './MeetingDetails';
-import MeetingVerify from './MeetingVerify';
-import {useParams} from 'react-router-dom';
+import styled from "styled-components";
+import Header from "../Components/Header";
+import Loader from "../../User/layout/Loader";
+import { useDispatch, useSelector } from "react-redux";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import MeetingDetails from "./MeetingDetails";
+import MeetingVerify from "./MeetingVerify";
+import { useParams } from "react-router-dom";
 import {
   clearErrors,
   userMeetingDetails,
-} from '../../../Features/contactUsFeatures/meetingDetailsSlice';
-import {useEffect} from 'react';
+} from "../../../Features/contactUsFeatures/meetingDetailsSlice";
+import { useEffect } from "react";
 
 const VerifyAndSchedule = () => {
   const dispatch = useDispatch();
-  const {id} = useParams();
-  const {uerMeeting, loading, error} = useSelector(
-    state => state.userMeetingDetails,
+  const { id } = useParams();
+  const { uerMeeting, loading, error } = useSelector(
+    (state) => state.userMeetingDetails
   );
 
   useEffect(() => {
     if (error) {
       toast.error(error, {
-        position: 'bottom-left',
-        theme: 'dark',
+        position: "bottom-left",
+        theme: "dark",
         pauseOnHover: true,
       });
       dispatch(clearErrors());

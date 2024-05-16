@@ -1,22 +1,22 @@
 import Header from '../Components/Header';
 import styled from 'styled-components';
-import {Typography, useMediaQuery} from '@mui/material';
+import { Typography, useMediaQuery } from '@mui/material';
 import ContactSupportIcon from '@mui/icons-material/ContactSupport';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import PublicIcon from '@mui/icons-material/Public';
 import DraftsIcon from '@mui/icons-material/Drafts';
 import SquareIcon from '@mui/icons-material/Square';
-import {Link} from 'react-router-dom';
-import {useSelector, useDispatch} from 'react-redux';
-import {useEffect, useState} from 'react';
-import {FormControl, InputLabel, Select, MenuItem} from '@mui/material';
+import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import {
   getAllMeetings,
   clearErrors,
 } from '../../../Features/contactUsFeatures/scheduleMeetingSlice';
 import Loader from '../../User/layout/Loader';
-import {toast, ToastContainer} from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import moment from 'moment';
 import Pagination from 'react-js-pagination';
@@ -27,7 +27,7 @@ const Meetings = () => {
   const [filterData, setFilterData] = useState({
     status: '',
   });
-  const {status} = filterData;
+  const { status } = filterData;
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -41,7 +41,7 @@ const Meetings = () => {
   } = useSelector(state => state.scheduleMeeting);
 
   const filterDataChange = e => {
-    setFilterData({...filterData, [e.target.name]: e.target.value});
+    setFilterData({ ...filterData, [e.target.name]: e.target.value });
   };
 
   const setCurrentPageNo = e => {
@@ -61,8 +61,8 @@ const Meetings = () => {
       dispatch(clearErrors());
     }
 
-    dispatch(getAllMeetings({keyword: status, currentPage: currentPage}));
-  }, [dispatch, getAllMeetings, status, currentPage, error]);
+    dispatch(getAllMeetings({ keyword: status, currentPage: currentPage }));
+  }, [dispatch, status, currentPage, error]);
 
   return (
     <>
@@ -73,7 +73,7 @@ const Meetings = () => {
           <ToastContainer />
           <Header title="USER MEETING'S" subtitle="DataPollex user meetings" />
           <StatusFilter>
-            <FormControl variant="outlined" style={{minWidth: 200}}>
+            <FormControl variant="outlined" style={{ minWidth: 200 }}>
               <InputLabel id="selector-label">Status</InputLabel>
               <Select
                 sx={{
@@ -86,7 +86,7 @@ const Meetings = () => {
                 name="status"
                 value={status}
                 onChange={filterDataChange}
-                inputProps={{'aria-label': 'Select Option'}}>
+                inputProps={{ 'aria-label': 'Select Option' }}>
                 <MenuItem value="pending">Pending</MenuItem>
                 <MenuItem value="scheduled">Scheduled</MenuItem>
                 <MenuItem value="completed">Completed</MenuItem>
@@ -106,7 +106,7 @@ const Meetings = () => {
                 <Link
                   to={`/admin/meeting/verify/${meeting._id}`}
                   key={meeting._id}>
-                  <Card sx={{minWidth: 275, minHeight: 150}}>
+                  <Card sx={{ minWidth: 275, minHeight: 150 }}>
                     <Title>
                       <h4>ID: {meeting._id}</h4>
                     </Title>
@@ -115,26 +115,26 @@ const Meetings = () => {
                       <CardContent>
                         <Typography
                           className={`${meeting.status}`}
-                          sx={{mb: 2, display: 'flex', alignItems: 'center'}}
+                          sx={{ mb: 2, display: 'flex', alignItems: 'center' }}
                           variant="h5"
                           component="div">
-                          <SquareIcon sx={{mr: '10px'}} />
+                          <SquareIcon sx={{ mr: '10px' }} />
                           {meeting.status}
                         </Typography>
 
                         <Typography
-                          sx={{mb: 2, display: 'flex', alignItems: 'center'}}
+                          sx={{ mb: 2, display: 'flex', alignItems: 'center' }}
                           variant="h5">
-                          <DraftsIcon sx={{mr: '10px'}} />
+                          <DraftsIcon sx={{ mr: '10px' }} />
                           {moment(meeting.startTime).format(
                             'dddd, MMMM D, YYYY h:mm A',
                           )}
                         </Typography>
 
                         <Typography
-                          sx={{display: 'flex', alignItems: 'center'}}
+                          sx={{ display: 'flex', alignItems: 'center' }}
                           variant="h5">
-                          <PublicIcon sx={{mr: '10px'}} />
+                          <PublicIcon sx={{ mr: '10px' }} />
                           {meeting.timeZone}
                         </Typography>
 
@@ -145,7 +145,7 @@ const Meetings = () => {
                             mt: '16px',
                           }}
                           variant="h5">
-                          <ContactSupportIcon sx={{mr: '10px'}} />
+                          <ContactSupportIcon sx={{ mr: '10px' }} />
                           {meeting.inquiryType}
                         </Typography>
                       </CardContent>
@@ -355,7 +355,9 @@ const PaginationBox = styled.div`
   }
 
   .pageLinkActive {
-    color: white;
+    color:  white;
+
+
   }
 `;
 
