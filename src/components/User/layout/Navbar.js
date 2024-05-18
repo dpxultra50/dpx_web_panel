@@ -1,17 +1,17 @@
-import styled from 'styled-components';
-import {Link, NavLink} from 'react-router-dom';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import MiscellaneousServicesOutlinedIcon from '@mui/icons-material/MiscellaneousServicesOutlined';
-import FindInPageOutlinedIcon from '@mui/icons-material/FindInPageOutlined';
-import ConnectWithoutContactOutlinedIcon from '@mui/icons-material/ConnectWithoutContactOutlined';
-import ContactSupportOutlinedIcon from '@mui/icons-material/ContactSupportOutlined';
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import MenuIcon from '@mui/icons-material/Menu';
-import CallIcon from '@mui/icons-material/Call';
+import styled from "styled-components";
+import { Link, NavLink } from "react-router-dom";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import MiscellaneousServicesOutlinedIcon from "@mui/icons-material/MiscellaneousServicesOutlined";
+import FindInPageOutlinedIcon from "@mui/icons-material/FindInPageOutlined";
+import ConnectWithoutContactOutlinedIcon from "@mui/icons-material/ConnectWithoutContactOutlined";
+import ContactSupportOutlinedIcon from "@mui/icons-material/ContactSupportOutlined";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import MenuIcon from "@mui/icons-material/Menu";
+import CallIcon from "@mui/icons-material/Call";
 
-const Navbar = ({openSideBar}) => {
+const Navbar = ({ openSideBar }) => {
   return (
     <Menu>
       <MenuWraper>
@@ -95,17 +95,17 @@ const Navbar = ({openSideBar}) => {
             </CallIco>
             <Details>
               <p>Call Anytime</p>
-              <h1>+880 1778578738</h1>
+              <h1>+880 1963431045</h1>
             </Details>
           </CallAnyTime>
-          <Search>
+          {/* <Search>
             <SearchIco>
               <SearchOutlinedIcon />
             </SearchIco>
             <SearchText>
               <input placeholder="Search" />
             </SearchText>
-          </Search>
+          </Search> */}
           <Button>
             <Link to="/contactus/meeting/timedate">
               <ArrowCircleRightIcon />
@@ -205,7 +205,7 @@ const NavMenu = styled.div`
     &:before {
       background-color: #ff4f47;
       bottom: 0px;
-      content: '';
+      content: "";
       height: 0px;
       width: 100% !important;
       left: 0px;
@@ -270,7 +270,7 @@ const HeadLine = styled.div`
   &:before {
     background-color: #ff4f47;
     bottom: 0px;
-    content: '';
+    content: "";
     height: 0px;
     width: 100% !important;
     left: 0px;
@@ -411,58 +411,58 @@ const Details = styled.div`
   }
 `;
 
-const Search = styled.div`
-  display: flex;
-  align-items: center;
-  background: rgb(32, 32, 32);
-  border-radius: 24px;
-  height: 40px;
-  margin: 8px 0;
-  min-width: 160px;
-  width: 160px;
-  position: relative;
+// const Search = styled.div`
+//   display: flex;
+//   align-items: center;
+//   background: rgb(32, 32, 32);
+//   border-radius: 24px;
+//   height: 40px;
+//   margin: 8px 0;
+//   min-width: 160px;
+//   width: 160px;
+//   position: relative;
 
-  &::before {
-    position: absolute;
-    content: '';
-    top: 7px;
-    bottom: 7px;
-    left: -30px;
-    width: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+//   &::before {
+//     position: absolute;
+//     content: "";
+//     top: 7px;
+//     bottom: 7px;
+//     left: -30px;
+//     width: 1px;
+//     background-color: rgba(255, 255, 255, 0.1);
+//   }
 
-  @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-    display: none;
-  }
-  @media (max-width: 767px) {
-    display: none;
-  }
-`;
-const SearchIco = styled.div`
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  height: 100%;
-  margin: 13.62px;
-  cursor: pointer;
-`;
-const SearchText = styled.div`
-  display: flex;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+//   @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+//     display: none;
+//   }
+//   @media (max-width: 767px) {
+//     display: none;
+//   }
+// `;
+// const SearchIco = styled.div`
+//   display: flex;
+//   align-items: center;
+//   flex-shrink: 0;
+//   height: 100%;
+//   margin: 13.62px;
+//   cursor: pointer;
+// `;
+// const SearchText = styled.div`
+//   display: flex;
+//   align-items: center;
+//   height: 100%;
+//   width: 100%;
 
-  input {
-    height: 100%;
-    width: 100%;
-    margin-right: 13.62px;
-    background: transparent;
-    outline: none;
-    border: none;
-    color: #ffffff;
-  }
-`;
+//   input {
+//     height: 100%;
+//     width: 100%;
+//     margin-right: 13.62px;
+//     background: transparent;
+//     outline: none;
+//     border: none;
+//     color: #ffffff;
+//   }
+// `;
 
 const Button = styled.div`
   position: relative;
@@ -493,7 +493,7 @@ const Button = styled.div`
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;

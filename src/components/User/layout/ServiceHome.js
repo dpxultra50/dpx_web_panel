@@ -1,58 +1,57 @@
-import styled from 'styled-components';
-import Slider from 'react-slick';
-import {motion} from 'framer-motion';
-import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
-import ProductCard from '../Cards/ProductCard';
+import styled from "styled-components";
+import Slider from "react-slick";
+import { motion } from "framer-motion";
+import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
+import ProductCard from "../Cards/ProductCard";
 
 const ServiceHome = () => {
   const serviceData = [
-  
     {
-      title: 'Elearning Platform Development',
+      title: "Full Stack Website",
       description:
-        'End-to-end website development expertise at your fingertips.',
-      imgsrc: '/images/digitalproduct/elearning-platform-development.webp',
-      iconsrc: '/images/technologies/e-learning.png',
+        "End-to-end website development expertise at your fingertips.",
+      imgsrc: "/images/digitalproduct/full-stack-wedbsite-development.png",
+      iconsrc: "/images/technologies/www.png",
     },
     {
-      title: 'Full Stack Website',
+      title: "Hybrid App Development",
       description:
-        'End-to-end website development expertise at your fingertips.',
-      imgsrc: '/images/digitalproduct/full-stack-wedbsite-development.png',
-      iconsrc: '/images/technologies/www.png',
+        "Seamless cross-platform mobile apps, crafted with expertise.",
+      imgsrc: "/images/digitalproduct/hybrid-app-development.jpg",
+      iconsrc: "/images/technologies/hybridapp.png",
     },
     {
-      title: 'Hybrid App Development',
+      title: "MERN Stack Website",
+      description: "Experience the power of MERN Stack with our MERN expertise",
+      imgsrc: "/images/digitalproduct/mern-stack-wedbsite-development.png",
+      iconsrc: "/images/technologies/javascripticoon.png",
+    },
+    {
+      title: "Android & iOS App ",
       description:
-        'Seamless cross-platform mobile apps, crafted with expertise.',
-      imgsrc: '/images/digitalproduct/hybrid-app-development.jpg',
-      iconsrc: '/images/technologies/hybridapp.png',
+        "Unleash the power of mobile with our Android & iOS app development.",
+      imgsrc: "/images/digitalproduct/android-and-ios-app.jpg",
+      iconsrc: "/images/technologies/play-store.png",
     },
     {
-      title: 'MERN Stack Website',
-      description: 'Experience the power of MERN Stack with our MERN expertise',
-      imgsrc: '/images/digitalproduct/mern-stack-wedbsite-development.png',
-      iconsrc: '/images/technologies/javascripticoon.png',
-    },
-    {
-      title: 'Android & iOS App ',
+      title: "Ecommerce Website",
       description:
-        'Unleash the power of mobile with our Android & iOS app development.',
-      imgsrc: '/images/digitalproduct/android-and-ios-app.jpg',
-      iconsrc: '/images/technologies/play-store.png',
+        "Transform your business with our expert e-commerce development.",
+      imgsrc: "/images/digitalproduct/ecommerce-website-development.jpg",
+      iconsrc: "/images/technologies/ecom.png",
     },
     {
-      title: 'Ecommerce Website',
+      title: "Mobile App Development",
+      description: "Transforming ideas into innovative mobile applications.",
+      imgsrc: "/images/digitalproduct/mobile-app-development.jpg",
+      iconsrc: "/images/technologies/appstore.png",
+    },
+    {
+      title: "E-Learning Platform",
       description:
-        'Transform your business with our expert e-commerce development.',
-      imgsrc: '/images/digitalproduct/ecommerce-website-development.jpg',
-      iconsrc: '/images/technologies/ecom.png',
-    },
-    {
-      title: 'Mobile App Development',
-      description: 'Transforming ideas into innovative mobile applications.',
-      imgsrc: '/images/digitalproduct/mobile-app-development.jpg',
-      iconsrc: '/images/technologies/appstore.png',
+        "Setup your ed-tech with e-learning website development service.",
+      imgsrc: "/images/digitalproduct/elearning-platform-development.webp",
+      iconsrc: "/images/technologies/e-learning.png",
     },
   ];
 
@@ -113,7 +112,8 @@ const ServiceHome = () => {
         transition={{
           repeat: Infinity,
           duration: 3,
-        }}>
+        }}
+      >
         <img src="/images/services-shape-1.png" alt="" />
       </Shape1>
       <Shape2>
@@ -176,7 +176,7 @@ const Service = styled.div`
     top: 0;
     left: 0;
     right: 0;
-    content: '';
+    content: "";
     background-color: #1c1b1f;
     height: 505px;
     z-index: -1;
@@ -293,7 +293,7 @@ const ServicesBottom = styled.div`
       z-index: 1;
       margin-left: 5px;
       &::before {
-        content: '';
+        content: "";
         border: solid #ff4f47;
         border-width: 0 4px 4px 0;
         display: inline-block;
@@ -308,7 +308,7 @@ const ServicesBottom = styled.div`
       z-index: 1;
       margin-right: 5px;
       &::before {
-        content: '';
+        content: "";
         border: solid #ff4f47;
         border-width: 0 4px 4px 0;
         display: inline-block;

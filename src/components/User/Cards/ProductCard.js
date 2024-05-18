@@ -51,6 +51,7 @@ const Container = styled.div`
   }
 `;
 const CardImg = styled.div`
+  max-height: 245px;
   overflow: hidden;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
