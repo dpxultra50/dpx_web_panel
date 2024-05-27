@@ -31,6 +31,7 @@ const Footer = () => {
     email: "",
   });
   const { name, email } = newsLetterData;
+  const year = new Date().getFullYear();
 
   const newsLetterSubmit = (e) => {
     e.preventDefault();
@@ -223,8 +224,8 @@ const Footer = () => {
       <FooterBottom>
         <BottomWraper>
           <p>
-            © <Link to="http://www.datapollex.com/">DataPollex.com </Link>{" "}
-            Blockchain & Software Development | 2015 – 2023 | All Rights
+            © <Link to="http://www.datapollex.com/">DataPollex.com </Link>
+            Blockchain & Software Development | 2015 – {year} | All Rights
             Reserved
           </p>
         </BottomWraper>
