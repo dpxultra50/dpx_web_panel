@@ -53,32 +53,32 @@ const About = () => {
   const featureData = [
     {
       image: "/images/icons/about_experience.png",
-      plus: "13+",
+      plus: "12+",
       statement: "Years Of Experience In Delivering IT Solutions",
     },
     {
       image: "/images/icons/about-apps-developed.png",
-      plus: "2500+",
+      plus: "65+",
       statement: "Mobile Apps Developed",
     },
     {
       image: "/images/icons/about-web-dev.png",
-      plus: "1100+",
+      plus: "150+",
       statement: "Websites Developed",
     },
     {
       image: "/images/icons/about-happy-clients.png",
-      plus: "2600+",
+      plus: "300+",
       statement: "Happy Clients",
     },
     {
       image: "/images/icons/about-ecommerce-developed.png",
-      plus: "120+",
+      plus: "40+",
       statement: "Ecommerce Developed",
     },
     {
       image: "/images/icons/about-developers.png",
-      plus: "1000+",
+      plus: "50+",
       statement: "Dedicated Developers & Designers",
     },
   ];
@@ -140,26 +140,26 @@ const About = () => {
                   {" "}
                   DataPollex is a renowned{" "}
                   <span>
-                    web & mobile application development company & the best IT
-                    Software Solutions provider based in New York, USA & India,
-                    established in 2010. Apart from this, we also have sales
-                    offices in Finland, Japan, Inda, UAE.
+                    software development & IT consulting company that helps
+                    startups, SMEs, and enterprises accelerate their businesses.
+                    Our team comprises more than 50 highly motivated
+                    professionals proficient in the latest technologies and
+                    constantly improving their skills.
                   </span>
                 </p>
               </Box>
 
               <Box sx={{ mb: 4 }}>
                 <p>
-                  DataPollex offers a comprehensive range of services designed
-                  to empower businesses and drive growth. Our skilled team of
-                  professionals excels in various domains, including software
-                  development, blockchain development, mobile app development,
-                  website development, AR-VR development, game development, and
-                  more. We leverage our expertise and innovative approach to
-                  create highly customized solutions that cater to your specific
-                  requirements.At DataPollex, we prioritize quality and
-                  timeliness in all our projects. We adhere to stringent quality
-                  standards and maintain the highest level of data security.
+                  DataPollex Our expertise and experience allow us to ensure
+                  high quality at every stage of the software development
+                  lifecycle, from business analysis and requirements engineering
+                  to product development, quality assurance, and post-product
+                  maintenance. We specialize in serving various industries
+                  globally, including Education & E-learning, Retail &
+                  E-commerce, Healthcare & Fitness, News Portals & Media, Social
+                  Networking, Real Estate, Travel & Hospitality, Gaming, and
+                  various On-Demand Solutions.
                 </p>
               </Box>
 
@@ -240,7 +240,7 @@ const About = () => {
                 <img src="/images/viewers/about-icon-2.webp" alt="" />
               </Box>
               <Box className="textbox" color={"white"}>
-                <h1>75+ Certified Engineers</h1>
+                <h1>50+ Certified Engineers</h1>
                 <p>
                   As a leading provider of Blockchain and Software Development
                   services, we are dedicated to delivering high-quality
@@ -261,7 +261,7 @@ const About = () => {
                 <img src="/images/viewers/about-icon-3.webp" alt="" />
               </Box>
               <Box className="textbox" color={"white"}>
-                <h1>650+ Successful Projects</h1>
+                <h1>150+ Successful Projects</h1>
                 <p>
                   With over a decade of experience in the IT market, ClickIT is
                   a trusted provider of top-notch solutions to companies of all
@@ -282,11 +282,10 @@ const About = () => {
                 <img src="/images/viewers/about-icon-4.webp" alt="" />
               </Box>
               <Box className="textbox" color={"white"}>
-                <h1> 100% Blockchain Solutions</h1>
+                <h1> 100% Development Solutions</h1>
                 <p>
-                  Our approach revolves around optimizing blockchain systems,
-                  harnessing the power of decentralized technology and
-                  leveraging blockchain frameworks.
+                  Empowering your vision with 100% Development Solutions—where
+                  innovation meets excellence.
                 </p>
               </Box>
             </Box>

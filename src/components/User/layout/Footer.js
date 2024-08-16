@@ -89,19 +89,17 @@ const Footer = () => {
           </Logo>
           <Title>
             <p>
-              DataPollex with more than two years of proven success in quality
+              DataPollex with more than five years of proven success in quality
               IT services.
             </p>
           </Title>
           <SubTitle>
-            DataPollex is a leading Blockchain and Software Development company,
-            providing premium solutions to companies of all sizes in various
-            industries such as Ecommerce, Fintech, and MarTech. With our
-            expertise in Blockchain technology and software development, we
-            deliver superior tech solutions tailored to meet your specific
-            needs.Our core focus areas include Blockchain development,mobile app
-            & website development,Distributed Ledger Technology, and software
-            development services.
+            DataPollex is a software development & IT consulting company that
+            helps startups, SMEs, and enterprises accelerate their businesses.
+            Our expertise and experience allow us to ensure high quality at
+            every stage of the software development lifecycle, from business
+            analysis and requirements engineering to product development,
+            quality assurance, and post-product maintenance.
           </SubTitle>
           <SocileIcon>
             <a href="https://www.facebook.com/datapollex/" target="blank">
@@ -204,7 +202,9 @@ const Footer = () => {
           <Title>
             <p> Contact</p>
           </Title>
-          <SubTitle>4057, Chittagong, Bangladesh</SubTitle>
+          <SubTitle>
+            CJKS Stadium Market, 4064, Kazir Dewri, Chittagong, Bangladesh
+          </SubTitle>
           <Content>
             <ul>
               <li>
@@ -215,7 +215,7 @@ const Footer = () => {
               </li>
               <li>
                 <EmailIcon />
-                <p>care@datapollex.com</p>
+                <p>datapollex@gmail.com</p>
               </li>
             </ul>
           </Content>

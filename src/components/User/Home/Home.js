@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <Container>
       <MetaData
-        title=" Top Mobile App & Website Development Company USA, India &
+        title="Top Mobile App & Website Development Company USA, India &
           Bangladesh - DataPollex"
         keywords="app development company, top app development companies,top it company in bangladesh,top it companies in dhaka,top it company in usa, app development companies, top app development company, mobile app development company,blockchain development company, top blockchain development company, blockchain development company in bangladesh,  mobile app development companies, ahmedabad, san francisco, USA, UAE,bangladesh, japan, India"
         desc="DataPollex is top mobile app, web and Website development company bangladesh, India, USA & Japan &amp; UAE that offers iPhone (iOS) &amp; Android app and blockchain development services at incredibly cost effectively."

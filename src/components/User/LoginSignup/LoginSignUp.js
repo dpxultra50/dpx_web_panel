@@ -1,21 +1,21 @@
-import {Link, NavLink, Outlet} from 'react-router-dom';
-import styled from 'styled-components';
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import {useDispatch, useSelector} from 'react-redux';
-import {clearErrors} from '../../../Features/userFeatures/authSlice';
-import {useEffect} from 'react';
-import {toast, ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Link, NavLink, Outlet } from "react-router-dom";
+import styled from "styled-components";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import { useDispatch, useSelector } from "react-redux";
+import { clearErrors } from "../../../Features/userFeatures/authSlice";
+import { useEffect } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const LoginSignup = () => {
-  const {error} = useSelector(state => state.user);
+  const { error } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (error) {
       toast.error(error, {
-        position: 'top-left',
-        theme: 'dark',
+        position: "top-left",
+        theme: "dark",
         pauseOnHover: true,
       });
       dispatch(clearErrors());
@@ -47,19 +47,19 @@ const LoginSignup = () => {
         <Display>
           <DisplayWrapper>
             <ImageOver>
-              <img src="/images/ico_landing_promo.png" alt="" />
+              <img src="/images/services/dpx-elearning-platform.webp" alt="" />
             </ImageOver>
             <TextOver>
-              <h5>BLOCKCHAIN SERVICES</h5>
+              <h5>E-Learning Solutions</h5>
               <p>
-                Experience a Decentralized Future with our Expert Blockchain &
-                Web3 Services.
+                Setup Your EdTech Startup with DataPollex E-Learning Platform
+                Development Service.
               </p>
               <More>
-                <Link to="/service/blockchain-development">
+                {/* <Link to="/service/blockchain-development">
                   <span> Discover more</span>
                   <ArrowCircleRightIcon />
-                </Link>
+                </Link> */}
               </More>
               <Button>
                 <Link to="/contactus/meeting/timedate">
@@ -95,7 +95,7 @@ const BackImg = styled.div`
   background-size: cover;
   mix-blend-mode: luminosity;
   opacity: 0.08;
-  background-image: url('images/noiseback.gif');
+  background-image: url("images/noiseback.gif");
   z-index: -1;
 `;
 
@@ -141,7 +141,6 @@ const DisplayWrapper = styled.div`
   padding: 1.5rem;
 `;
 const ImageOver = styled.div`
-  background-color: #09080d;
   border-radius: 12px;
   img {
     width: 100%;
@@ -196,7 +195,7 @@ const OutletTitle = styled.div`
     margin-bottom: 15px;
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       height: 3.5px;
       width: 70px;
       background-image: linear-gradient(#ff4b2b, #ff416c);
@@ -223,7 +222,7 @@ const OutletTitle = styled.div`
     &:before {
       background-color: #ff4f47;
       bottom: -10px;
-      content: '';
+      content: "";
       height: 0px;
       width: 100% !important;
       left: 0px;
@@ -301,7 +300,7 @@ const Button = styled.div`
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;

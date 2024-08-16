@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import Slider from 'react-slick';
-import ClientCard from '../Cards/ClientCard';
-import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
+import styled from "styled-components";
+import Slider from "react-slick";
+import ClientCard from "../Cards/ClientCard";
+import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 
 const Clients = () => {
   const settings = {
@@ -12,7 +12,7 @@ const Clients = () => {
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
-    cssEase: 'linear',
+    cssEase: "linear",
     responsive: [
       {
         breakpoint: 1200,
@@ -51,44 +51,44 @@ const Clients = () => {
 
   const clintData = [
     {
-      logo: '/images/clintlogo/comp-logo-01.png',
-      link: 'https://www.telia.fi/',
+      logo: "/images/clintlogo/comp-logo-01.png",
+      link: "https://www.telia.fi/",
     },
     {
-      logo: '/images/clintlogo/comp-logo-02.png',
-      link: 'https://www.suomi24.fi/',
+      logo: "/images/clintlogo/comp-logo-02.png",
+      link: "https://www.suomi24.fi/",
     },
     {
-      logo: '/images/clintlogo/comp-logo-03.png',
-      link: 'https://www.gcash.com/',
+      logo: "/images/clintlogo/comp-logo-03.png",
+      link: "https://www.gcash.com/",
     },
     {
-      logo: '/images/clintlogo/comp-logo-04.png',
-      link: 'https://www.findshare.com/',
+      logo: "/images/clintlogo/comp-logo-04.png",
+      link: "https://www.findshare.com/",
     },
     {
-      logo: '/images/clintlogo/comp-logo-05.svg',
-      link: 'https://www.carousell.sg/',
+      logo: "/images/clintlogo/comp-logo-05.svg",
+      link: "https://www.carousell.sg/",
     },
     {
-      logo: '/images/clintlogo/comp-logo-06.svg',
-      link: 'https://www.pionex.com/',
+      logo: "/images/clintlogo/comp-logo-06.svg",
+      link: "https://www.pionex.com/",
     },
     {
-      logo: '/images/clintlogo/comp-logo-07.svg',
-      link: 'https://www.pexpay.com/',
+      logo: "/images/clintlogo/comp-logo-07.svg",
+      link: "https://www.pexpay.com/",
     },
     {
-      logo: '/images/clintlogo/comp-logo-08.png',
-      link: 'https://leda.jup.io/',
+      logo: "/images/clintlogo/comp-logo-08.png",
+      link: "https://leda.jup.io/",
     },
     {
-      logo: '/images/clintlogo/comp-logo-09.svg',
-      link: 'https://adanft.app/',
+      logo: "/images/clintlogo/comp-logo-09.svg",
+      link: "https://adanft.app/",
     },
     {
-      logo: '/images/clintlogo/comp-logo-10.svg',
-      link: ' https://www.rakuten.com/',
+      logo: "/images/clintlogo/comp-logo-10.svg",
+      link: " https://www.rakuten.com/",
     },
   ];
   return (

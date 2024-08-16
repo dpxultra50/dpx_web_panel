@@ -1,27 +1,27 @@
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import {useEffect, useState} from 'react';
-import * as StyleComponent from './StyleComponent';
-import {useDispatch, useSelector} from 'react-redux';
-import {registerUser} from '../../../Features/userFeatures/authSlice';
-import {useNavigate} from 'react-router-dom';
-import {toast, ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import MetaData from '../layout/MetaData';
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import { useEffect, useState } from "react";
+import * as StyleComponent from "./StyleComponent";
+import { useDispatch, useSelector } from "react-redux";
+import { registerUser } from "../../../Features/userFeatures/authSlice";
+import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import MetaData from "../layout/MetaData";
 
 const SignupCard = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const {isAuthenticated} = useSelector(state => state.user);
+  const { isAuthenticated } = useSelector((state) => state.user);
 
   const [user, setUser] = useState({
-    name: '',
-    email: '',
-    phonenumber: '',
-    password: '',
-    confirmpassword: '',
-    companyname: '',
-    companyrole: '',
+    name: "",
+    email: "",
+    phonenumber: "",
+    password: "",
+    confirmpassword: "",
+    companyname: "",
+    companyrole: "",
   });
 
   const {
@@ -36,43 +36,43 @@ const SignupCard = () => {
 
   const [avatarPreview, setAvatarPreview] = useState();
 
-  const registerSubmit = e => {
+  const registerSubmit = (e) => {
     e.preventDefault();
 
     //Password Match
     if (password !== confirmpassword) {
-      toast.error('Password not matched', {
-        position: 'top-left',
-        theme: 'dark',
+      toast.error("Password not matched", {
+        position: "top-left",
+        theme: "dark",
         pauseOnHover: true,
       });
       return;
     }
 
     const regForm = new FormData();
-    regForm.set('name', name);
-    regForm.set('email', email);
-    regForm.set('phonenumber', phonenumber);
-    regForm.set('password', password);
-    regForm.set('companyname', companyname);
-    regForm.set('companyrole', companyrole);
+    regForm.set("name", name);
+    regForm.set("email", email);
+    regForm.set("phonenumber", phonenumber);
+    regForm.set("password", password);
+    regForm.set("companyname", companyname);
+    regForm.set("companyrole", companyrole);
     if (user.userImage) {
-      regForm.set('image', user.userImage);
+      regForm.set("image", user.userImage);
     }
 
     dispatch(registerUser(regForm));
   };
 
-  const registerDataChange = e => {
-    if (e.target.name === 'userImage') {
-      setUser({...user, userImage: e.target.files[0]});
+  const registerDataChange = (e) => {
+    if (e.target.name === "userImage") {
+      setUser({ ...user, userImage: e.target.files[0] });
       setAvatarPreview(URL.createObjectURL(e.target.files[0]));
     } else {
-      setUser({...user, [e.target.name]: e.target.value});
+      setUser({ ...user, [e.target.name]: e.target.value });
     }
   };
 
-  const redirect = '/account';
+  const redirect = "/account";
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -92,7 +92,8 @@ const SignupCard = () => {
         <StyleComponent.Wrapper>
           <StyleComponent.Form
             onSubmit={registerSubmit}
-            encType="multipart/form-data">
+            encType="multipart/form-data"
+          >
             <StyleComponent.FormWraper>
               <StyleComponent.Name
                 type="text"
@@ -155,7 +156,7 @@ const SignupCard = () => {
                 onChange={registerDataChange}
               />
             </StyleComponent.FormWraper>
-            <StyleComponent.Img>
+            {/* <StyleComponent.Img>
               <StyleComponent.Avatar
                 id="imginput"
                 type="file"
@@ -175,13 +176,13 @@ const SignupCard = () => {
                   />
                 </StyleComponent.Preview>
               ) : null}
-            </StyleComponent.Img>
+            </StyleComponent.Img> */}
             <input
               type="submit"
               value="Register"
               id="registersubmit"
               className="signUpBtn"
-              style={{display: 'none'}}
+              style={{ display: "none" }}
             />
             <StyleComponent.Button>
               <label htmlFor="registersubmit">

@@ -1,32 +1,32 @@
-import styled from 'styled-components';
-import {Link, NavLink} from 'react-router-dom';
-import {useState} from 'react';
-import CloseIcon from '@mui/icons-material/Close';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import MiscellaneousServicesOutlinedIcon from '@mui/icons-material/MiscellaneousServicesOutlined';
-import FindInPageOutlinedIcon from '@mui/icons-material/FindInPageOutlined';
-import ConnectWithoutContactOutlinedIcon from '@mui/icons-material/ConnectWithoutContactOutlined';
-import ContactSupportOutlinedIcon from '@mui/icons-material/ContactSupportOutlined';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import CallIcon from '@mui/icons-material/Call';
-import EmailIcon from '@mui/icons-material/Email';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import PersonIcon from '@mui/icons-material/Person';
-import {useSelector} from 'react-redux';
-import LoginIcon from '@mui/icons-material/Login';
+import styled from "styled-components";
+import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
+import CloseIcon from "@mui/icons-material/Close";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import MiscellaneousServicesOutlinedIcon from "@mui/icons-material/MiscellaneousServicesOutlined";
+import FindInPageOutlinedIcon from "@mui/icons-material/FindInPageOutlined";
+import ConnectWithoutContactOutlinedIcon from "@mui/icons-material/ConnectWithoutContactOutlined";
+import ContactSupportOutlinedIcon from "@mui/icons-material/ContactSupportOutlined";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import CallIcon from "@mui/icons-material/Call";
+import EmailIcon from "@mui/icons-material/Email";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import PersonIcon from "@mui/icons-material/Person";
+import { useSelector } from "react-redux";
+import LoginIcon from "@mui/icons-material/Login";
 
-const Sidebar = ({sidebar, closeSidebar}) => {
-  const {isAuthenticated} = useSelector(state => state.user);
+const Sidebar = ({ sidebar, closeSidebar }) => {
+  const { isAuthenticated } = useSelector((state) => state.user);
 
   //Open & Close Dropdown Menu
   const [dropdown, setDropdown] = useState(false);
 
   const toggDropdown = () => {
-    setDropdown(prevState => !prevState);
+    setDropdown((prevState) => !prevState);
   };
 
   return (
@@ -83,7 +83,8 @@ const Sidebar = ({sidebar, closeSidebar}) => {
               </Link>
               <Link
                 onClick={closeSidebar}
-                to="/service/artificial-intelligence-and-machine-learning">
+                to="/service/artificial-intelligence-and-machine-learning"
+              >
                 <span>AI & ML</span>
                 <KeyboardDoubleArrowRightIcon />
               </Link>
@@ -173,7 +174,8 @@ const Sidebar = ({sidebar, closeSidebar}) => {
             </a>
             <a
               href="https://www.linkedin.com/company/datapollex/"
-              target="blank">
+              target="blank"
+            >
               <LinkedInIcon />
             </a>
           </SocileWrap>
@@ -195,12 +197,18 @@ const Container = styled.div`
   z-index: 999;
   transform: translateX(-100%);
   transition: transform 500ms ease 0ms;
-  overflow-x: scroll;
+  overflow-y: scroll;
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
 
-  ${props =>
+  /* overflow-x: scroll;
+  overflow-y: hidden; */
+
+  ${(props) =>
     props.toggleStyle
-      ? 'transform: translateX(0%)'
-      : 'transform: translateX(-100%)'}
+      ? "transform: translateX(0%)"
+      : "transform: translateX(-100%)"}
 `;
 
 const Wraper = styled.div`
@@ -316,8 +324,8 @@ const Dropdown = styled.div`
   justify-content: center;
   transition: transform 500ms ease;
 
-  ${props =>
-    props.isOpen ? 'transform: rotate(+90deg);' : 'transform: rotate(0deg);'}
+  ${(props) =>
+    props.isOpen ? "transform: rotate(+90deg);" : "transform: rotate(0deg);"}
 
   svg {
     font-size: 30px;
@@ -363,7 +371,7 @@ const DropdownMenu = styled.div`
 
   padding-left: 42px;
   overflow-y: hidden;
-  ${props => (props.isOpen ? 'max-height: 450px' : 'max-height: 0px;')}
+  ${(props) => (props.isOpen ? "max-height: 450px" : "max-height: 0px;")}
 `;
 
 //Bottom

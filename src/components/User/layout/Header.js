@@ -1,20 +1,21 @@
-import styled from 'styled-components';
-import {Link} from 'react-router-dom';
-import PhoneInTalkOutlinedIcon from '@mui/icons-material/PhoneInTalkOutlined';
-import EmailIcon from '@mui/icons-material/Email';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import {useEffect} from 'react';
-import {useState} from 'react';
-import Navbar from './Navbar';
-import {useSelector} from 'react-redux';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
+import EmailIcon from "@mui/icons-material/Email";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { useEffect } from "react";
+import { useState } from "react";
+import Navbar from "./Navbar";
+import { useSelector } from "react-redux";
 
-const Header = ({openSideBar}) => {
+const Header = ({ openSideBar }) => {
   const [showNav, setShowNav] = useState(false);
 
-  const {isAuthenticated} = useSelector(state => state.user);
+  const { isAuthenticated } = useSelector((state) => state.user);
 
   useEffect(() => {
     function handleScroll() {
@@ -27,10 +28,10 @@ const Header = ({openSideBar}) => {
     }
 
     // add the scroll event listener
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // remove the event listener when the component unmounts
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -45,7 +46,7 @@ const Header = ({openSideBar}) => {
               </li>
               <li>
                 <EmailIcon />
-                <p>care@datapollex.com</p>
+                <p>datapollex@gmail.com</p>
               </li>
             </ul>
           </TopLeft>
@@ -69,18 +70,29 @@ const Header = ({openSideBar}) => {
               </ul>
             </TopMenu>
             <Social>
+              <a
+                href="https://wa.me/8801963431045?text=Is+anyone+available+to+chat?"
+                target="blank"
+              >
+                <WhatsAppIcon />
+              </a>
+
               <a href="https://www.facebook.com/datapollex/" target="blank">
                 <FacebookIcon />
               </a>
-              <a href="https://www.facebook.com/datapollex/" target="blank">
+              <a href="https://x.com/DataPollex" target="blank">
                 <TwitterIcon />
               </a>
               <a
                 href="https://www.linkedin.com/company/datapollex/"
-                target="blank">
+                target="blank"
+              >
                 <LinkedInIcon />
               </a>
-              <a href="https://www.facebook.com/datapollex/" target="blank">
+              <a
+                href="https://www.instagram.com/datapollex?igsh=YzJqNmg2NWhvNGZ6"
+                target="blank"
+              >
                 <InstagramIcon />
               </a>
             </Social>
@@ -88,7 +100,7 @@ const Header = ({openSideBar}) => {
         </TopWraper>
       </Top>
       <Navbar openSideBar={openSideBar} />
-      <PopUpNav className={showNav ? 'show' : ''}>
+      <PopUpNav className={showNav ? "show" : ""}>
         <Navbar openSideBar={openSideBar} />
       </PopUpNav>
     </Container>
@@ -196,7 +208,7 @@ const TopMenu = styled.div`
         top: 10px;
         bottom: 8px;
         right: -14px;
-        content: '';
+        content: "";
         width: 1px;
         background-color: #86838c;
         transform: rotate(15deg);

@@ -1,10 +1,11 @@
-import {Link} from 'react-router-dom';
-import styled from 'styled-components';
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import {motion} from 'framer-motion';
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import { motion } from "framer-motion";
+import Skeleton from "@mui/material/Skeleton";
 
-const ServiceHeader = ({header}) => {
-  const {title, subTitle, headerimg} = header;
+const ServiceHeader = ({ header }) => {
+  const { title, subTitle, headerimg } = header;
   return (
     <Container>
       <Shape1
@@ -15,7 +16,8 @@ const ServiceHeader = ({header}) => {
         transition={{
           repeat: Infinity,
           duration: 3,
-        }}>
+        }}
+      >
         <img src="/images/services-shape-1.png" alt="" />
       </Shape1>
       <Shape2>
@@ -38,7 +40,16 @@ const ServiceHeader = ({header}) => {
         </Detail>
 
         <ImgBox>
-          <img src={headerimg} alt="" />
+          {headerimg ? (
+            <img src={headerimg} alt="" />
+          ) : (
+            <Skeleton
+              animation="wave"
+              variant="rectangular"
+              width={745}
+              height={431}
+            />
+          )}
         </ImgBox>
       </FlexWrapper>
     </Container>
@@ -60,7 +71,7 @@ const Container = styled.div`
     top: 0;
     left: 0;
     right: 0;
-    content: '';
+    content: "";
     background-color: #1c1b1f;
     height: 505px;
     z-index: -1;
@@ -93,7 +104,7 @@ const Detail = styled.div`
   p {
     color: white;
     font-size: 36px;
-    line-height: 48px;
+    line-height: 60px;
     font-weight: 800;
     @media (max-width: 767px) {
       font-size: 20px;
@@ -138,7 +149,7 @@ const Button = styled.div`
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
