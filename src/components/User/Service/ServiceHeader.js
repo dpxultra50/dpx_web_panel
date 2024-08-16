@@ -41,7 +41,7 @@ const ServiceHeader = ({ header }) => {
 
         <ImgBox>
           {headerimg ? (
-            <img src={headerimg} alt="" />
+            <img src={headerimg} alt="" loading="lazy" />
           ) : (
             <Skeleton
               animation="wave"
