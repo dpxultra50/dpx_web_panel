@@ -145,12 +145,37 @@ const Sidebar = ({ sidebar, closeSidebar }) => {
 
         <Contact>
           <ContactWrap>
-            <ContactIcon>
-              <CallIcon />
-            </ContactIcon>
+            <ContactFlag>
+              <img src="/images/icons/bd.png" alt="" />
+            </ContactFlag>
             <ContactDetails>
-              +880 1963431045 <br />
-              +880 1778578738
+              <a
+                href="tel:+447723779854"
+                style={{
+                  marginRight: "25px",
+                  textDecoration: "none",
+                  color: "inherit",
+                }}
+              >
+                +880 1963431045
+              </a>
+            </ContactDetails>
+          </ContactWrap>
+          <ContactWrap>
+            <ContactFlag>
+              <img src="/images/icons/uk.png" alt="" />
+            </ContactFlag>
+            <ContactDetails>
+              <a
+                href="tel:+447723779854"
+                style={{
+                  marginRight: "25px",
+                  textDecoration: "none",
+                  color: "inherit",
+                }}
+              >
+                +44 7723 779854
+              </a>
             </ContactDetails>
           </ContactWrap>
           <ContactWrap>
@@ -390,6 +415,18 @@ const ContactWrap = styled.div`
   padding-left: 20px;
   margin-bottom: 15px;
   color: #ffffff;
+`;
+
+const ContactFlag = styled.div`
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 25px;
+  }
 `;
 const ContactIcon = styled.div`
   width: 30px;

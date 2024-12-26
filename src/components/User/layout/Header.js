@@ -41,8 +41,24 @@ const Header = ({ openSideBar }) => {
           <TopLeft>
             <ul>
               <li>
-                <PhoneInTalkOutlinedIcon />
-                <p>+880 1963431045 +880 1778578738</p>
+                <img src="/images/icons/bd.png" width={"18px"} alt="" />
+                <a
+                  href="tel:+447723779854"
+                  style={{
+                    marginRight: "25px",
+                    textDecoration: "none",
+                    color: "inherit",
+                  }}
+                >
+                  +880 1963431045
+                </a>
+                <img src="/images/icons/uk.png" width={"18px"} alt="" />
+                <a
+                  href="tel:+447723779854"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  +44 7723 779854
+                </a>
               </li>
               <li>
                 <EmailIcon />
@@ -176,7 +192,7 @@ const TopLeft = styled.div`
       }
 
       p {
-        margin-left: 10px;
+        margin-left: 5px;
         font-size: 16px;
       }
     }

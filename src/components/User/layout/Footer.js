@@ -88,10 +88,7 @@ const Footer = () => {
             </Link>
           </Logo>
           <Title>
-            <p>
-              DataPollex with more than five years of proven success in quality
-              IT services.
-            </p>
+            <p>Fuel An Idea With The Technology & Build A Fire</p>
           </Title>
           <SubTitle>
             DataPollex is a software development & IT consulting company that
@@ -199,34 +196,46 @@ const Footer = () => {
           </NewsLetterForm>
         </Newsletter>
         <Contact>
-          <Title>
-            <p> Contact</p>
-          </Title>
-          <SubTitle>
-            CJKS Stadium Market, 4064, Kazir Dewri, Chittagong, Bangladesh
-          </SubTitle>
-          <Content>
-            <ul>
-              <li>
-                <PhoneInTalkOutlinedIcon />
-                <p>
-                  +880 1963431045 <br /> +880 1778578738
-                </p>
-              </li>
-              <li>
-                <EmailIcon />
-                <p>datapollex@gmail.com</p>
-              </li>
-            </ul>
-          </Content>
+          <OfficeTitle>
+            <img src="/images/icons/bd.png" alt="" />
+            <p> BD OFFICE</p>
+          </OfficeTitle>
+
+          <OfficeSubTitle>
+            4012,CJKS Shopping Complex, 1027 Naval Ave, Chattogram 4000.
+            <li>
+              <PhoneInTalkOutlinedIcon />
+              <p>+880 1963431045</p>
+            </li>
+            <li className="separate">
+              <EmailIcon />
+              <p>datapollex@gmail.com</p>
+            </li>
+          </OfficeSubTitle>
+
+          <OfficeTitle>
+            <img src="/images/icons/uk.png" alt="" />
+            <p> UK OFFICE</p>
+          </OfficeTitle>
+
+          <OfficeSubTitle>
+            124-128 City Road, London, United Kingdom, EC1V 2NX.
+            <li>
+              <PhoneInTalkOutlinedIcon />
+              <p>+44 7723 779854</p>
+            </li>
+            <li>
+              <EmailIcon />
+              <p>datapollex@gmail.com</p>
+            </li>
+          </OfficeSubTitle>
         </Contact>
       </Warper>
       <FooterBottom>
         <BottomWraper>
           <p>
-            © <Link to="http://www.datapollex.com/">DataPollex.com </Link>
-            Blockchain & Software Development | 2015 – {year} | All Rights
-            Reserved
+            © <Link to="http://www.datapollex.com/">DataPollex Limited</Link> |
+            Software Company | 2015 – {year} | All Rights Reserved
           </p>
         </BottomWraper>
       </FooterBottom>
@@ -504,9 +513,40 @@ const Button = styled.label`
   }
 `;
 const Contact = styled.div`
-  div {
+  /* div {
     &:nth-child(1) {
       margin-bottom: 30px;
+    }
+  } */
+`;
+const OfficeTitle = styled.div`
+  display: flex;
+
+  p {
+    font: 35px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+  img {
+    width: 30px;
+    margin-right: 5px;
+  }
+`;
+const OfficeSubTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  .separate {
+    margin-bottom: 25px;
+  }
+  li {
+    display: flex;
+    align-items: center;
+
+    svg {
+      color: #ff4f47;
+      font-size: 16px;
+      margin-right: 5px;
     }
   }
 `;
@@ -515,7 +555,7 @@ const Content = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: 22px;
+  /* margin-top: 22px; */
 
   ul {
     display: flex;
