@@ -182,7 +182,7 @@ const Sidebar = ({ sidebar, closeSidebar }) => {
             <ContactIcon>
               <EmailIcon />
             </ContactIcon>
-            <ContactDetails>care@datapollex.com</ContactDetails>
+            <ContactDetails>contact@datapollex.com</ContactDetails>
           </ContactWrap>
         </Contact>
 

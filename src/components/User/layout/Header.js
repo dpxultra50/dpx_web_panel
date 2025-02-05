@@ -62,7 +62,7 @@ const Header = ({ openSideBar }) => {
               </li>
               <li>
                 <EmailIcon />
-                <p>datapollex@gmail.com</p>
+                <p>contact@datapollex.com</p>
               </li>
             </ul>
           </TopLeft>

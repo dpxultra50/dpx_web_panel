@@ -209,7 +209,7 @@ const Footer = () => {
             </li>
             <li className="separate">
               <EmailIcon />
-              <p>datapollex@gmail.com</p>
+              <p>contact@datapollex.com</p>
             </li>
           </OfficeSubTitle>
 
@@ -226,7 +226,7 @@ const Footer = () => {
             </li>
             <li>
               <EmailIcon />
-              <p>datapollex@gmail.com</p>
+              <p>contact@datapollex.com</p>
             </li>
           </OfficeSubTitle>
         </Contact>
