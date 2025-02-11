@@ -37,60 +37,77 @@ const Testimonials = () => {
   };
   var data = [
     {
-      name: "App Development",
-      image: "/images/clintprofiles/appdevclint.webp",
-      jobTitle: "CEO - Co Founder",
+      name: "Kristjan Keskull",
+      image: "/images/clintprofiles/20250211_104047.webp",
+      comapnyimg: "/images/clintlogo/ramirent-group.svg",
+      jobTitle: "Service Owner at Ramirent Group",
       reating: 5,
       comment:
-        "DataPollex's app development service is exceptional. Their team demonstrated professionalism & expertise.The development process was efficient, resulting in a polished and seamless app.",
+        "DataPollex delivered outstanding business automation solutions, streamlining our operations seamlessly. Their expertise, professionalism, and support made the entire process smooth and efficient. Highly recommended!",
     },
     {
-      name: "Web Development",
-      image: "/images/clintprofiles/webdevclint.webp",
-      jobTitle: "Chief Innovation Officer",
+      name: "Engr. Sheikh Korban Ali",
+      image: "/images/clintprofiles/Sheikh-Korban-Ali.webp",
+      comapnyimg: "/images/clintlogo/malisha_header-logo (3).svg",
+      jobTitle: "Chairman of MalishaEdu",
       reating: 5,
       comment:
-        "DataPollex's web development service is truly impressive. They transformed my vision into a visually stunning and highly functional website, with exceptional attention to detail.",
+        "Heartfelt appreciation to DataPollex for rescuing us from our challenges. We were facing various problems managing the several branches in many countries, students, agents. They automated our entire business from all ends.",
     },
     {
-      name: "Blockchain Development",
-      image: "/images/clintprofiles/blockchainclint.webp",
-      jobTitle: "Technical Lead",
+      name: "Syed Mohammed Walid Karim",
+      image: "/images/clintprofiles/Syed_Mohammed_Walid_Karim.webp",
+      comapnyimg: "/images/clintlogo/wafimaedu.png",
+      jobTitle: "CEO, WAFIMA EDU",
       reating: 5,
       comment:
-        "DataPollex's blockchain development service exceeded my expectations.Their team's commitment to delivering top-notch results make them a trusted partner in the blockchain space.",
+        "It was a great experience working with team DataPollex. Their genius developers took our problem and solved it in the most efficient way. They automated our entire educational consultancy system and made it paperless.",
     },
     {
-      name: "E-commerce Development",
-      image: "/images/clintprofiles/ecomclint.webp",
-      jobTitle: "Founder & CEO ",
+      name: "Akib Mostafa",
+      image: "/images/clintprofiles/akib_mostafa.webp",
+      comapnyimg: "/images/clintlogo/Logo_Lockup_Vertical_White.png",
+      jobTitle: "Founder & CEO, Transmove",
+      reating: 5,
+      comment:
+        "Many thanks to DataPollex for believing in me and making my dream come true. Their talented developers worked tirelessly to bring Transmove to life, turning my vision into reality with their dedication and expertise.",
+    },
+    {
+      name: "Dr. Molla Maruf",
+      image: "/images/clintprofiles/Molla-Maruf.webp",
+      comapnyimg: "/images/clintlogo/BRCC.png",
+      jobTitle: "Director of the Belt & Road Chinese Center",
+      reating: 5,
+      comment:
+        "Datapollex realized my vision and made my dream E-Learning platform come true. I would be grateful to them for all the services they have provided so far and I'm also looking forward to working with them on new projects.",
+    },
+    {
+      name: "Md. Firoj Alam",
+      image: "/images/clintprofiles/Md-Firoj-Alam.webp",
+      comapnyimg: "/images/clintlogo/wafimalogo.png",
+      jobTitle: "Founder and GM, WAFIMA GROUP",
+      reating: 5,
+      comment:
+        "DataPollex exceeded our expectations by a huge margin while designing our website according to our branding. Because it was a tough task and many have failed before. The entire WAFIMA will always be indebted to them.",
+    },
+    {
+      name: "Golam Kibria",
+      image: "/images/clintprofiles/Golam-Kibria.webp",
+      comapnyimg: "/images/clintlogo/Study-Room-Logo.png",
+      jobTitle: "Owner of StudyRoom",
       reating: 5,
       comment:
         "I highly recommend for DataPollex's e-commerce development. Their team's expertise are exceptional, resulting in a seamless and user-friendly online shopping experience for our customers.",
     },
+
     {
-      name: "Cyber Security",
-      image: "/images/clintprofiles/cyberclint.webp",
-      jobTitle: "CEO - Co Founder",
-      reating: 4.5,
-      comment:
-        "Trust DataPollex for a secure digital environment.Their expertise in protecting sensitive data and proactive approach to identifying potential threats make them a reliable partner for safeguarding.",
-    },
-    {
-      name: "Digital Marketing",
-      image: "/images/clintprofiles/digital-marketingclint.webp",
-      jobTitle: "Marketing Head",
+      name: "Mohammed Nurul Islam Khan",
+      image: "/images/clintprofiles/𝗡𝘂𝗿𝘂𝗹_𝗜𝘀𝗹𝗮𝗺_𝗞𝗵𝗮𝗻.webp",
+      jobTitle: "CEO at Mayfair Global Education",
+      comapnyimg: "/images/clintlogo/𝐌𝐚𝐲𝐟𝐚𝐢𝐫_𝐆𝐥𝐨𝐛𝐚𝐥_𝐄𝐝𝐮𝐜𝐚𝐭𝐢𝐨𝐧.png",
       reating: 4.3,
       comment:
-        "I highly recommend DataPollex's Digital Marketing service! Their expertise and strategic approach have significantly boosted our online presence and helped us reach a wider audience.",
-    },
-    {
-      name: "Metaverse Development",
-      image: "/images/clintprofiles/metaverse-development-clint.webp",
-      jobTitle: "Chief Architect",
-      reating: 4,
-      comment:
-        "DataPollex's Metaverse Development Service is simply exceptional! Their expertise in creating interactive virtual worlds is unparalleled, providing users with a seamless and captivating experience.",
+        "DataPollex provided exceptional in-house IT services and system implementation, ensuring a seamless and efficient transition for our organization. Their expertise and commitment to excellence greatly enhanced our operations. recommended!",
     },
   ];
   return (
@@ -120,6 +137,7 @@ const Testimonials = () => {
                 name={data.name}
                 jobTitle={data.jobTitle}
                 imgsrc={data.image}
+                cpmimg={data.comapnyimg}
                 reating={data.reating}
                 comment={data.comment}
               />

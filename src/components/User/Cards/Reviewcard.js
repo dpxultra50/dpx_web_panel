@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Rating from "@mui/material/Rating";
-const Reviewcard = ({ name, imgsrc, reating, comment, jobTitle }) => {
+const Reviewcard = ({ name, imgsrc, reating, comment, jobTitle, cpmimg }) => {
   return (
     <Card>
       <Container>
@@ -13,6 +13,9 @@ const Reviewcard = ({ name, imgsrc, reating, comment, jobTitle }) => {
           <ClintDetails>
             <h4>{name}</h4>
             <p>{jobTitle}</p>
+            <CmpImg>
+              <img src={cpmimg} alt="" />
+            </CmpImg>
           </ClintDetails>
         </ClintInfo>
         <ClintTxt>{comment}</ClintTxt>
@@ -117,8 +120,21 @@ const ImgCont = styled.div`
     }
   }
 `;
+const CmpImg = styled.div`
+  width: 80px;
+  height: 60px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+  }
+`;
+
 const ClintDetails = styled.div`
   margin-left: 20px;
+  position: relative;
   h4 {
     color: #ffffff;
     font-size: 20px;
