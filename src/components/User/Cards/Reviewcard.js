@@ -131,7 +131,7 @@ const ImgCont = styled.div`
   }
 `;
 const CmpImg = styled.div`
-  width: 80px;
+  width: 85px;
   height: 60px;
 
   img {

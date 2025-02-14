@@ -46,6 +46,24 @@ const Testimonials = () => {
         "DataPollex delivered outstanding business automation solutions, streamlining our operations seamlessly. Their expertise, professionalism, and support made the entire process smooth and efficient. Highly recommended!",
     },
     {
+      name: "Mohammed Nurul Islam Khan",
+      image: "/images/clintprofiles/𝗡𝘂𝗿𝘂𝗹_𝗜𝘀𝗹𝗮𝗺_𝗞𝗵𝗮𝗻.webp",
+      jobTitle: "CEO at Mayfair Global Education",
+      comapnyimg: "/images/clintlogo/𝐌𝐚𝐲𝐟𝐚𝐢𝐫_𝐆𝐥𝐨𝐛𝐚𝐥_𝐄𝐝𝐮𝐜𝐚𝐭𝐢𝐨𝐧.png",
+      reating: 4.3,
+      comment:
+        "DataPollex provided exceptional in-house IT services and system implementation, ensuring a seamless and efficient transition for our organization. Their expertise and commitment to excellence greatly enhanced our operations. recommended!",
+    },
+    {
+      name: "Mo Mansoor",
+      image: "/images/clintprofiles/20250211_103319.webp",
+      jobTitle: "Director Of Acquisitions at Kings Capital",
+      comapnyimg: "/images/clintlogo/kingscapitalre.webp",
+      reating: 4.3,
+      comment:
+        "Kings Capital is highly satisfied with the IT consultation and development services. Their expertise and efficient solutions has greatly enhanced our operations. Highly recommended for any business seeking top-tier IT solutions.",
+    },
+    {
       name: "Engr. Sheikh Korban Ali",
       image: "/images/clintprofiles/Sheikh-Korban-Ali.webp",
       comapnyimg: "/images/clintlogo/malisha_header-logo (3).svg",
@@ -62,6 +80,15 @@ const Testimonials = () => {
       reating: 5,
       comment:
         "It was a great experience working with team DataPollex. Their genius developers took our problem and solved it in the most efficient way. They automated our entire educational consultancy system and made it paperless.",
+    },
+    {
+      name: "Matthew Cagney",
+      image: "/images/clintprofiles/20250211_105105.webp",
+      comapnyimg: "/images/clintlogo/Aqualane-Logo_full-color.png",
+      jobTitle: "Clinical Research Coordinator",
+      reating: 5,
+      comment:
+        "Aqualane Clinical Research is highly impressed with the exceptional software development services provided. Their team delivered a secure, scalable, and user-friendly solution tailored to our needs. Their ongoing support & expertise has greatly enhanced our tech side.",
     },
     {
       name: "Akib Mostafa",
@@ -98,16 +125,6 @@ const Testimonials = () => {
       reating: 5,
       comment:
         "I highly recommend for DataPollex's e-commerce development. Their team's expertise are exceptional, resulting in a seamless and user-friendly online shopping experience for our customers.",
-    },
-
-    {
-      name: "Mohammed Nurul Islam Khan",
-      image: "/images/clintprofiles/𝗡𝘂𝗿𝘂𝗹_𝗜𝘀𝗹𝗮𝗺_𝗞𝗵𝗮𝗻.webp",
-      jobTitle: "CEO at Mayfair Global Education",
-      comapnyimg: "/images/clintlogo/𝐌𝐚𝐲𝐟𝐚𝐢𝐫_𝐆𝐥𝐨𝐛𝐚𝐥_𝐄𝐝𝐮𝐜𝐚𝐭𝐢𝐨𝐧.png",
-      reating: 4.3,
-      comment:
-        "DataPollex provided exceptional in-house IT services and system implementation, ensuring a seamless and efficient transition for our organization. Their expertise and commitment to excellence greatly enhanced our operations. recommended!",
     },
   ];
   return (
