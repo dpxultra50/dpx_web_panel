@@ -4,37 +4,37 @@ import Slider from "react-slick";
 import Reviewcard from "../Cards/Reviewcard";
 
 const Testimonials = () => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    autoplay: true,
-    speed: 500,
-    autoplaySpeed: 900000,
-    centerMode: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          centerMode: false,
-        },
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          centerMode: false,
-        },
-      },
-    ],
-  };
+  // var settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   slidesToShow: 2,
+  //   slidesToScroll: 1,
+  //   initialSlide: 0,
+  //   autoplay: true,
+  //   speed: 500,
+  //   autoplaySpeed: 900000,
+  //   centerMode: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         infinite: true,
+  //         centerMode: false,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 991,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         infinite: true,
+  //         centerMode: false,
+  //       },
+  //     },
+  //   ],
+  // };
   var data = [
     {
       name: "Kristjan Keskull",
@@ -120,15 +120,15 @@ const Testimonials = () => {
               <span>
                 <CheckBoxOutlineBlankIcon />
               </span>
-              Testimonials
+              What Our Partners Say
             </p>
             <h1>
-              What they’re talking <br /> about us
+              Over 30+ Leading Brands Rely <br /> On Our Expertise
             </h1>
           </AboutTitle>
         </TextBox>
       </Wraper>
-      <CardBox>
+      {/* <CardBox>
         <Slide {...settings}>
           {data &&
             data.map((data, index) => (
@@ -143,6 +143,20 @@ const Testimonials = () => {
               />
             ))}
         </Slide>
+      </CardBox> */}
+      <CardBox>
+        {data &&
+          data.map((data, index) => (
+            <Reviewcard
+              key={index}
+              name={data.name}
+              jobTitle={data.jobTitle}
+              imgsrc={data.image}
+              cpmimg={data.comapnyimg}
+              reating={data.reating}
+              comment={data.comment}
+            />
+          ))}
       </CardBox>
     </Container>
   );
@@ -227,11 +241,65 @@ const AboutTitle = styled.div`
       margin-bottom: 20px;
     }
     @media (max-width: 450px) {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
   }
 `;
-const CardBox = styled.div``;
+const CardBox = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+    > div:last-child {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 125px !important;
+        background: linear-gradient(
+          to bottom,
+          rgba(22, 22, 25, 0.75) 0%,
+          rgb(22, 22, 25) 95%,
+          rgb(22, 22, 25) 90%,
+          rgb(27, 27, 32) 100%
+        );
+        pointer-events: none;
+      }
+    }
+
+    > div:nth-last-child(2)::after {
+      content: none !important;
+      display: none !important;
+    }
+  }
+
+  > div:nth-last-child(-n + 2) {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(
+        to bottom,
+        rgba(22, 22, 25, 0.85) 0%,
+        rgb(22, 22, 25) 95%,
+        rgb(22, 22, 25) 90%,
+        rgb(27, 27, 32) 100%
+      );
+      pointer-events: none;
+    }
+  }
+`;
+
 const Slide = styled(Slider)`
   .slick-dots {
     display: none !important;

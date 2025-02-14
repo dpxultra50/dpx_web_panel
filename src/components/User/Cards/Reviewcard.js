@@ -80,6 +80,10 @@ const ClintInfo = styled.div`
   display: flex;
   align-items: center;
   margin-left: 10px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const Clintimg = styled.div`
   position: relative;
@@ -87,6 +91,12 @@ const Clintimg = styled.div`
   width: 85px;
   height: 85px;
   border-radius: 50%;
+
+  @media (max-width: 768px) {
+    width: 30%;
+    width: 75px;
+    height: 85px;
+  }
   background-image: -webkit-linear-gradient(
     90deg,
     rgb(28, 27, 31) 0%,
@@ -135,6 +145,10 @@ const CmpImg = styled.div`
 const ClintDetails = styled.div`
   margin-left: 20px;
   position: relative;
+
+  @media (max-width: 768px) {
+    width: 70%;
+  }
   h4 {
     color: #ffffff;
     font-size: 20px;
