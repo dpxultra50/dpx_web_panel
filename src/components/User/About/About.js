@@ -171,11 +171,33 @@ const About = () => {
               </p>
 
               <SvgBox>
-                {svgData.map((svg, index) => (
+                <a
+                  href="https://www.goodfirms.co/"
+                  target="_blank"
+                  rel="nofollow"
+                >
+                  <img
+                    src="/images/clintlogo/GF Logo.svg"
+                    alt="GoodFirms"
+                    width="150"
+                  />
+                </a>
+                <a
+                  href="https://clutch.co/profile/datapollex"
+                  target="_blank"
+                  rel="nofollow"
+                >
+                  <img
+                    src="/images/clintlogo/clutch-co-vector-logo.svg"
+                    alt="clutch"
+                    width="150"
+                  />
+                </a>
+                {/* {svgData.map((svg, index) => (
                   <AboutImg key={index}>
                     <img src={svg} alt="icon" />
                   </AboutImg>
-                ))}
+                ))} */}
               </SvgBox>
             </Box>
           </AboutTxt>
@@ -443,13 +465,16 @@ const SvgBox = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
   margin-top: 30px;
   @media (max-width: 767px) {
     width: 100%;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 5px;
+  }
+  a {
+    margin-right: 10px;
   }
 `;
 const AboutCards = styled.div`
