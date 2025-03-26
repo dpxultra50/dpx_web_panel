@@ -202,7 +202,8 @@ const Footer = () => {
           </OfficeTitle>
 
           <OfficeSubTitle>
-            4012,CJKS Shopping Complex, 1027 Naval Ave, Chattogram 4000.
+            Sweet Home Red Rose, Building No: 572, Road: 01, Lane: 03, Block C,
+            South Khulshi, Chattogram.
             <li>
               <PhoneInTalkOutlinedIcon />
               <p>+880 1963431045</p>
