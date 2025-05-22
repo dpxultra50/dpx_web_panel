@@ -101,6 +101,8 @@ const MetaverseDev = lazy(() =>
   import("./components/User/Services/MetaverseDev")
 );
 
+const Qr = lazy(() => import("./components/Admin/Components/Qr"));
+
 const App = () => {
   const dispatch = useDispatch();
 
@@ -118,6 +120,14 @@ const App = () => {
             element={
               <Suspense fallback={<Loader />}>
                 <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/qr"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Qr />
               </Suspense>
             }
           />
